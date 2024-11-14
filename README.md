@@ -40,3 +40,4 @@ watch.txt为文件名， -file为文件路径。需把文件名单放在5.txt内
 ```
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower -c --run-once 容器名1 容器名2
 ```
+`--run - once`运行一次，若设置时间间隔使用`--interval`
