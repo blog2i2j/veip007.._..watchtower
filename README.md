@@ -3,6 +3,7 @@
 docker run -d \
 --name watchtower \
 -v /var/run/docker.sock:/var/run/docker.sock \
+--restart=always \
 containrrr/watchtower
 ```
 
@@ -11,6 +12,7 @@ containrrr/watchtower
 docker run -d \
 --name watchtower \
 -v /var/run/docker.sock:/var/run/docker.sock \
+--restart=always \
 containrrr/watchtower 容器名1 容器名1
 ```
 
@@ -19,6 +21,7 @@ containrrr/watchtower 容器名1 容器名1
 docker run -d \
 --name watchtower \
 -v /var/run/docker.sock:/var/run/docker.sock \
+--restart=always \
 containrrr/watchtower --interval 3600
 ```
 以上为3600秒更新一次，可叠加特定名称
@@ -28,6 +31,7 @@ containrrr/watchtower --interval 3600
 docker run -d \
 --name watchtower \
 -v /var/run/docker.sock:/var/run/docker.sock \
+--restart=always \
 containrrr/watchtower --container - file /path/to/containers - to - watch.txt
 ```
 watch.txt为文件名， -file为文件路径。需把文件名单放在watch.txt内
