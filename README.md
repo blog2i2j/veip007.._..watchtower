@@ -29,9 +29,9 @@ containrrr/watchtower --interval 3600
 ### 按照文本内名单更新
 ```
 docker run -d \
---name watchtower \
--v /var/run/docker.sock:/var/run/docker.sock \
---restart=always \
-containrrr/watchtower --container - file /path/to/containers - to - watch.txt
+  --name watchtower \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v /path/to/5.txt:/config/5.txt \
+  containrrr/watchtower --label-enable
 ```
-watch.txt为文件名， -file为文件路径。需把文件名单放在watch.txt内
+watch.txt为文件名， -file为文件路径。需把文件名单放在5.txt内
