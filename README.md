@@ -55,6 +55,7 @@ containers=$(cat /volume1/docker/watchtower/5.txt)
 for container in $containers; do
   docker run --rm \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    docker.lefu.men/containrrr/watchtower $container
+    docker.lefu.men/containrrr/watchtower -c --run-once $container
+done
 ```
 设置定时运行up.sh即可
